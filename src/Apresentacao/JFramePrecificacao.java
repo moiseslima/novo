@@ -11,7 +11,7 @@ package Apresentacao;
  */
 public class JFramePrecificacao extends javax.swing.JFrame {
 
-    float num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12,num13,num20, num21,num22,num23,num14, num24,num25,num15,num26,num27,num16,num28, num29, num30, num31, num32,num33;
+    double num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12,num13,num20, num21,num22,num23,num14, num24,num25,num15,num26,num27,num16,num28, num29, num30, num31, num32,num33;
 
     /**
      * Creates new form JFramePrecificacao
@@ -59,7 +59,6 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Processo de Precificação");
-        setResizable(false);
 
         jLabel1PrecoUnitario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1PrecoUnitario.setForeground(new java.awt.Color(0, 204, 0));
@@ -364,7 +363,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
     private void jTextField3PrecoUnitarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3PrecoUnitarioActionPerformed
        
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+        num1 = Double.parseDouble(jTextField3PrecoUnitario.getText());
         jTextField3PrecoUnitario.setText(String.valueOf(num1));
         
          jTextField14ResultadoPrecoVenda.setText(String.valueOf(num1));
@@ -373,14 +372,14 @@ public class JFramePrecificacao extends javax.swing.JFrame {
            
             
     private void jTextField4ImpostoFederalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ImpostoFederalActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
+        num1 = Double.parseDouble(jTextField3PrecoUnitario.getText());
+        num2 = Double.parseDouble(jTextField4ImpostoFederal.getText());
         
         jTextField4ImpostoFederal.setText(String.valueOf(num2));
 
         num7 = ((num2/100) * num1);
         jTextField9RseultadoImpostoFederal.setText(String.valueOf(num7));
-        // We have to parse the text to a type float.
+        // We have to parse the text to a type Double.
         
         jTextField14ResultadoPrecoVenda.setText("");        
 
@@ -391,9 +390,9 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         
     private void jTextField5ImpostoEstadualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ImpostoEstadualActionPerformed
          
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
-        num3 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
+        num1 = Double.parseDouble(jTextField3PrecoUnitario.getText());
+        num2 = Double.parseDouble(jTextField4ImpostoFederal.getText());
+        num3 = Double.parseDouble(jTextField5ImpostoEstadual.getText());
         
         jTextField5ImpostoEstadual.setText(String.valueOf(num3));        
         
@@ -412,10 +411,10 @@ public class JFramePrecificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ImpostoEstadualActionPerformed
 
     private void jTextField6FreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6FreteActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
-        num3 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
-        num4 = Float.parseFloat(jTextField6Frete.getText());
+        num1 = Double.parseDouble(jTextField3PrecoUnitario.getText());
+        num2 = Double.parseDouble(jTextField4ImpostoFederal.getText());
+        num3 = Double.parseDouble(jTextField5ImpostoEstadual.getText());
+        num4 = Double.parseDouble(jTextField6Frete.getText());
         
         jTextField6Frete.setText(String.valueOf(num4));
         
@@ -436,11 +435,11 @@ public class JFramePrecificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField6FreteActionPerformed
 
     private void jTextField7CustosGeraisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7CustosGeraisActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
-        num3 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
-        num4 = Float.parseFloat(jTextField6Frete.getText());
-        num5 = Float.parseFloat(jTextField7CustosGerais.getText());
+        num1 = Double.parseDouble(jTextField3PrecoUnitario.getText());
+        num2 = Double.parseDouble(jTextField4ImpostoFederal.getText());
+        num3 = Double.parseDouble(jTextField5ImpostoEstadual.getText());
+        num4 = Double.parseDouble(jTextField6Frete.getText());
+        num5 = Double.parseDouble(jTextField7CustosGerais.getText());
         
         jTextField7CustosGerais.setText(String.valueOf(num5));
         
@@ -460,12 +459,12 @@ public class JFramePrecificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7CustosGeraisActionPerformed
 
     private void jTextField8GanhoLivreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8GanhoLivreActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
-        num3 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
-        num4 = Float.parseFloat(jTextField6Frete.getText());
-        num5 = Float.parseFloat(jTextField7CustosGerais.getText());
-        num6 = Float.parseFloat(jTextField8GanhoLivre.getText());
+        num1 = Double.parseDouble(jTextField3PrecoUnitario.getText());
+        num2 = Double.parseDouble(jTextField4ImpostoFederal.getText());
+        num3 = Double.parseDouble(jTextField5ImpostoEstadual.getText());
+        num4 = Double.parseDouble(jTextField6Frete.getText());
+        num5 = Double.parseDouble(jTextField7CustosGerais.getText());
+        num6 = Double.parseDouble(jTextField8GanhoLivre.getText());
        
         jTextField8GanhoLivre.setText(String.valueOf(num6));
         
