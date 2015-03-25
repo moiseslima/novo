@@ -55,7 +55,6 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         jTextField12ResultadoCustosGerais = new javax.swing.JTextField();
         jTextField13ResultadoGanhoLivre = new javax.swing.JTextField();
         jTextField14ResultadoPrecoVenda = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -218,8 +217,6 @@ public class JFramePrecificacao extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Ok");
-
         jButton2.setText("Limpar Campos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,13 +259,13 @@ public class JFramePrecificacao extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel3)
                                             .addComponent(jLabel4)
                                             .addComponent(jLabel5))
-                                        .addGap(1, 1, 1))
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(1, 1, 1)))
                                 .addGap(30, 30, 30)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField8GanhoLivre, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -281,7 +278,9 @@ public class JFramePrecificacao extends javax.swing.JFrame {
                                 .addComponent(jTextField3PrecoUnitario, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2))
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField5ImpostoEstadual))))
                     .addGroup(layout.createSequentialGroup()
@@ -298,12 +297,6 @@ public class JFramePrecificacao extends javax.swing.JFrame {
                                 .addComponent(jTextField14ResultadoPrecoVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -334,11 +327,9 @@ public class JFramePrecificacao extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField8GanhoLivre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(16, 16, 16)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -375,6 +366,12 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         // We have to parse the text to a type float.
         num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
         jTextField3PrecoUnitario.setText(String.valueOf(num1));
+        
+         num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+       
+
+        num12 = (num1);
+        jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
     }//GEN-LAST:event_jTextField3PrecoUnitarioActionPerformed
 
     private void jTextField4ImpostoFederalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ImpostoFederalActionPerformed
@@ -384,6 +381,13 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         num7 = (num2 / 100) * num1;
         jTextField9RseultadoImpostoFederal.setText(String.valueOf(num7));
         // We have to parse the text to a type float.
+        
+         num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
+        
+
+        num12 = (num1 + num2);
+        jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
 
     }//GEN-LAST:event_jTextField4ImpostoFederalActionPerformed
 
@@ -393,6 +397,14 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num9 = (num2 / 100) * num1;
         jTextField11ResultadoImpostoEstadual.setText(String.valueOf(num9));
+        
+          num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
+        num4 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
+        
+
+        num12 = (num1 + num2 + num4);
+        jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
     }//GEN-LAST:event_jTextField5ImpostoEstadualActionPerformed
 
     private void jTextField6FreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6FreteActionPerformed
@@ -401,6 +413,15 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num8 = (num2 / 100) * num1;
         jTextField10ResultadoFrete.setText(String.valueOf(num8));
+        
+          num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
+        num3 = Float.parseFloat(jTextField6Frete.getText());
+        num4 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
+        
+
+        num12 = (num1 + num2 + num3 + num4);
+        jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
     }//GEN-LAST:event_jTextField6FreteActionPerformed
 
     private void jTextField7CustosGeraisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7CustosGeraisActionPerformed
@@ -409,6 +430,16 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num10 = (num2 / 100) * num1;
         jTextField12ResultadoCustosGerais.setText(String.valueOf(num10));
+        
+          num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
+        num3 = Float.parseFloat(jTextField6Frete.getText());
+        num4 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
+        num5 = Float.parseFloat(jLabel5CustosGerais.getText());
+        
+
+        num12 = (num1 + num2 + num3 + num4 + num5);
+        jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
     }//GEN-LAST:event_jTextField7CustosGeraisActionPerformed
 
     private void jTextField8GanhoLivreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8GanhoLivreActionPerformed
@@ -417,6 +448,16 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num11 = (num2 / 100) * num1;
         jTextField13ResultadoGanhoLivre.setText(String.valueOf(num11));
+        
+          num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
+        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
+        num3 = Float.parseFloat(jTextField6Frete.getText());
+        num4 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
+        num5 = Float.parseFloat(jLabel5CustosGerais.getText());
+        num6 = Float.parseFloat(jTextField8GanhoLivre.getText());
+
+        num12 = (num1 + num2 + num3 + num4 + num5 + num6);
+        jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
     }//GEN-LAST:event_jTextField8GanhoLivreActionPerformed
 
     private void jTextField9RseultadoImpostoFederalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9RseultadoImpostoFederalActionPerformed
@@ -503,7 +544,6 @@ public class JFramePrecificacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1PrecoUnitario;
