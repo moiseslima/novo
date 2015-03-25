@@ -220,7 +220,12 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         jButton1.setText("Ok");
 
-        jButton2.setText("Cancelar");
+        jButton2.setText("Limpar Campos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -366,7 +371,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField3PrecoUnitarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3PrecoUnitarioActionPerformed
-          // First we define float variables.
+        // First we define float variables.
         // We have to parse the text to a type float.
         num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
         jTextField3PrecoUnitario.setText(String.valueOf(num1));
@@ -376,66 +381,63 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
         jTextField4ImpostoFederal.setText(String.valueOf(num2));
 
+        num7 = (num2 / 100) * num1;
+        jTextField9RseultadoImpostoFederal.setText(String.valueOf(num7));
+        // We have to parse the text to a type float.
+
     }//GEN-LAST:event_jTextField4ImpostoFederalActionPerformed
 
     private void jTextField5ImpostoEstadualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ImpostoEstadualActionPerformed
         num3 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
         jTextField5ImpostoEstadual.setText(String.valueOf(num3));
+
+        num9 = (num2 / 100) * num1;
+        jTextField11ResultadoImpostoEstadual.setText(String.valueOf(num9));
     }//GEN-LAST:event_jTextField5ImpostoEstadualActionPerformed
 
     private void jTextField6FreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6FreteActionPerformed
         num4 = Float.parseFloat(jTextField6Frete.getText());
         jTextField6Frete.setText(String.valueOf(num4));
+
+        num8 = (num2 / 100) * num1;
+        jTextField10ResultadoFrete.setText(String.valueOf(num8));
     }//GEN-LAST:event_jTextField6FreteActionPerformed
 
     private void jTextField7CustosGeraisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7CustosGeraisActionPerformed
         num5 = Float.parseFloat(jTextField7CustosGerais.getText());
         jTextField7CustosGerais.setText(String.valueOf(num5));
+
+        num10 = (num2 / 100) * num1;
+        jTextField12ResultadoCustosGerais.setText(String.valueOf(num10));
     }//GEN-LAST:event_jTextField7CustosGeraisActionPerformed
 
     private void jTextField8GanhoLivreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8GanhoLivreActionPerformed
         num6 = Float.parseFloat(jTextField8GanhoLivre.getText());
         jTextField8GanhoLivre.setText(String.valueOf(num6));
+
+        num11 = (num2 / 100) * num1;
+        jTextField13ResultadoGanhoLivre.setText(String.valueOf(num11));
     }//GEN-LAST:event_jTextField8GanhoLivreActionPerformed
 
     private void jTextField9RseultadoImpostoFederalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9RseultadoImpostoFederalActionPerformed
-         // First we define float variables.
-
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField4ImpostoFederal.getText());
-        num7 = (num2 / 100) * num1;
-        jTextField9RseultadoImpostoFederal.setText(String.valueOf(num7));
-    // We have to parse the text to a type float.
 
 
     }//GEN-LAST:event_jTextField9RseultadoImpostoFederalActionPerformed
 
     private void jTextField10ResultadoFreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ResultadoFreteActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField6Frete.getText());
-        num8 = (num2 / 100) * num1;
-        jTextField10ResultadoFrete.setText(String.valueOf(num8));
+
     }//GEN-LAST:event_jTextField10ResultadoFreteActionPerformed
 
     private void jTextField11ResultadoImpostoEstadualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ResultadoImpostoEstadualActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
-        num9 = (num2 / 100) * num1;
-        jTextField11ResultadoImpostoEstadual.setText(String.valueOf(num9));
+
     }//GEN-LAST:event_jTextField11ResultadoImpostoEstadualActionPerformed
 
     private void jTextField12ResultadoCustosGeraisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ResultadoCustosGeraisActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jLabel5CustosGerais.getText());
-        num10 = (num2 / 100) * num1;
-        jTextField12ResultadoCustosGerais.setText(String.valueOf(num10));
+
     }//GEN-LAST:event_jTextField12ResultadoCustosGeraisActionPerformed
 
     private void jTextField13ResultadoGanhoLivreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ResultadoGanhoLivreActionPerformed
-        num1 = Float.parseFloat(jTextField3PrecoUnitario.getText());
-        num2 = Float.parseFloat(jTextField8GanhoLivre.getText());
-        num11 = (num2 / 100) * num1;
-        jTextField13ResultadoGanhoLivre.setText(String.valueOf(num11));
+
     }//GEN-LAST:event_jTextField13ResultadoGanhoLivreActionPerformed
 
     private void jTextField14ResultadoPrecoVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ResultadoPrecoVendaActionPerformed
@@ -445,11 +447,25 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         num4 = Float.parseFloat(jTextField5ImpostoEstadual.getText());
         num5 = Float.parseFloat(jLabel5CustosGerais.getText());
         num6 = Float.parseFloat(jTextField8GanhoLivre.getText());
-        
-       
-        num12 = (num1 + num2 + num3+ num4 + num5 + num6);
+
+        num12 = (num1 + num2 + num3 + num4 + num5 + num6);
         jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
     }//GEN-LAST:event_jTextField14ResultadoPrecoVendaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        jTextField3PrecoUnitario.setText("");
+        jTextField4ImpostoFederal.setText("");
+        jTextField5ImpostoEstadual.setText("");
+        jTextField6Frete.setText("");
+        jTextField7CustosGerais.setText("");
+        jTextField8GanhoLivre.setText("");
+        jTextField9RseultadoImpostoFederal.setText("");
+        jTextField10ResultadoFrete.setText("");
+        jTextField11ResultadoImpostoEstadual.setText("");
+        jTextField12ResultadoCustosGerais.setText("");
+        jTextField13ResultadoGanhoLivre.setText("");
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
