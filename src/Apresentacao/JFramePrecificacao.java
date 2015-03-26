@@ -18,6 +18,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
      */
     public JFramePrecificacao() {
         initComponents();
+        jTextField3PrecoUnitario.grabFocus(); //focar ao iniciar o programa
     }
 
     /**
@@ -367,7 +368,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         jTextField3PrecoUnitario.setText(String.valueOf(num1));
         
          jTextField14ResultadoPrecoVenda.setText(String.valueOf(num1));
-        
+        jTextField3PrecoUnitario.transferFocus(); //ao apertar enter, vai pro proximo campo
     }//GEN-LAST:event_jTextField3PrecoUnitarioActionPerformed
            
             
@@ -385,7 +386,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num12 = (num1 + num7);
         jTextField14ResultadoPrecoVenda.setText(String.valueOf(num12));
-
+        jTextField4ImpostoFederal.transferFocus(); //apertando enter, transfere foco p/proximo campo
     }//GEN-LAST:event_jTextField4ImpostoFederalActionPerformed
         
     private void jTextField5ImpostoEstadualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ImpostoEstadualActionPerformed
@@ -408,6 +409,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         
         num13 = (num21 + num8);
         jTextField14ResultadoPrecoVenda.setText(String.valueOf(num13));
+        jTextField5ImpostoEstadual.transferFocus();
     }//GEN-LAST:event_jTextField5ImpostoEstadualActionPerformed
 
     private void jTextField6FreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6FreteActionPerformed
@@ -432,6 +434,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         
         num14 = (num23 + num9);
         jTextField14ResultadoPrecoVenda.setText(String.valueOf(num14));
+        jTextField6Frete.transferFocus();
     }//GEN-LAST:event_jTextField6FreteActionPerformed
 
     private void jTextField7CustosGeraisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7CustosGeraisActionPerformed
@@ -456,6 +459,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num15 = (num25 + num10);
         jTextField14ResultadoPrecoVenda.setText(String.valueOf(num15));
+        jTextField7CustosGerais.transferFocus();
     }//GEN-LAST:event_jTextField7CustosGeraisActionPerformed
 
     private void jTextField8GanhoLivreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8GanhoLivreActionPerformed
@@ -483,6 +487,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
 
         num16 = (num27 + num11);
         jTextField14ResultadoPrecoVenda.setText(String.valueOf(num16));
+        jTextField8GanhoLivre.transferFocus();
     }//GEN-LAST:event_jTextField8GanhoLivreActionPerformed
 
     private void jTextField9RseultadoImpostoFederalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9RseultadoImpostoFederalActionPerformed
@@ -522,6 +527,7 @@ public class JFramePrecificacao extends javax.swing.JFrame {
         jTextField11ResultadoImpostoEstadual.setText("");
         jTextField12ResultadoCustosGerais.setText("");
         jTextField13ResultadoGanhoLivre.setText("");
+        jTextField14ResultadoPrecoVenda.setText(""); //limpa o resultado
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
